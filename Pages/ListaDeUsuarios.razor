@@ -1,0 +1,62 @@
+@page "/listadeusuarios"
+@using info_app.Data
+@inject UsuarioService service
+
+<h1>Lista de Usuarios</h1>
+
+   <div class="container">
+
+    <div class="row bg-light">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Apelido</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                    <th>Status</th>
+
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @if (Usuarios.Any())
+                {
+                    @foreach (var user in Usuarios)
+                    {
+                        <tr>
+                            <td>@user.Id</td>
+                            <td>@user.Nome</td>
+                            <td>@user.Apelido</td>
+                            <td>@user.Email</td>
+                            <td>@user.Senha</td>
+                            <td>@user.Status</td> 
+                           
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="6"><strong>Nenhum usuario disponível</strong></td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@code {
+
+    List<Usuario> Usuarios = new List<Usuario>();
+    protected override async Task OnInitializedAsync()
+    {
+        await AtualizaUsuario();
+    }
+
+    private async Task AtualizaUsuario()
+    {
+        Usuarios = await service.RetornaUsuarioAsync();
+    }
+
+}

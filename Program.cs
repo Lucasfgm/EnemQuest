@@ -10,11 +10,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
 builder.Services.AddDbContext<QuestaoDbContext>
 (options =>{
     options.UseSqlite("Data Source =Questao.db");
 });
 builder.Services.AddScoped<QuestaoService>();
+
+builder.Services.AddDbContext<UsuarioDbContext>
+(options =>{
+    options.UseSqlite("Data Source =Usuario.db");
+});
+builder.Services.AddScoped<UsuarioService>();
 
 var app = builder.Build();
 
