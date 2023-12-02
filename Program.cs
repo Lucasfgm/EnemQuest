@@ -19,7 +19,7 @@ builder.Services.AddScoped<QuestaoService>();
 
 builder.Services.AddDbContext<UsuarioDbContext>
 (options =>{
-    options.UseSqlite("Data Source =Usuario.db");
+    options.UseSqlite("Data Source =Questao.db");
 });
 builder.Services.AddScoped<UsuarioService>();
 
