@@ -15,6 +15,15 @@ public class QuestaoDbContext : DbContext{
     public DbSet<Questao> Questao {get; set; }
     #endregion
 
+    #region Métodos sobrecarregados
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Questao>().HasData(RetornaQuestoes());
+        base.OnModelCreating(modelBuilder);
+    }
+    #endregion
+
     #region Métodos privados
 
     private List<Questao> RetornaQuestoes()
@@ -29,7 +38,8 @@ public class QuestaoDbContext : DbContext{
                 Opcao3 = "c) Itália",
                 Opcao4 = "d) Inglaterra",
                 Opcao5 = "e) Espanha",
-                Resposta = "d) Inglaterra"
+                Resposta = "d) Inglaterra",
+
             },
 
             new Questao{
@@ -40,7 +50,7 @@ public class QuestaoDbContext : DbContext{
                 Opcao3 = "c) mecanização da produção agrícola e consequente fixação do homem à terra.",
                 Opcao4 = "d) facilidade na compra de máquinas pelos artesãos que conseguiam financiamento para isso.",
                 Opcao5 = "e) preocupação em aumentar a produção, respeitando-se o limite da força física do trabalhador.",
-                Resposta = "b) realização da produção em grandes unidades fabris e intensa divisão do trabalho."
+                Resposta = "b) realização da produção em grandes unidades fabris e intensa divisão do trabalho.",
             },
 
             new Questao{
@@ -51,7 +61,7 @@ public class QuestaoDbContext : DbContext{
                 Opcao3 = "c) A fotografia, o cinema e a eletricidade",
                 Opcao4 = "d) O para-raios, a calculadora e o telégrafo.",
                 Opcao5 = "e) A televisão, o computador e o iphone", 
-                Resposta = "c) A fotografia, o cinema e a eletricidade"
+                Resposta = "c) A fotografia, o cinema e a eletricidade",
             }
 
 

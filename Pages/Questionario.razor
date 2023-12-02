@@ -1,3 +1,66 @@
-@page "/questionario" 
+@page "/questionario"
+@using info_app.Data
+@inject QuestaoService service
 
-<h1>Questionario</h1>
+<h1>Questionário</h1>
+
+   <div class="container">
+
+    <div class="row bg-light">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>QuestaoTitulo</th>
+                    <th>Opcao1</th>
+                    <th>Opcao2</th>
+                    <th>Opcao3</th>
+                    <th>Opcao4</th>
+                    <th>Opcao5</th>
+                    <th>Resposta</th>
+
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @if (Questoes.Any())
+                {
+                    @foreach (var quest in Questoes)
+                    {
+                        <tr>
+                            <td>@quest.Id</td>
+                            <td>@quest.QuestaoTitulo</td>
+                            <td>@quest.Opcao1</td>
+                            <td>@quest.Opcao2</td>
+                            <td>@quest.Opcao3</td>
+                            <td>@quest.Opcao4</td> 
+                            <td>@quest.Opcao5</td> 
+                            <td>@quest.Resposta</td> 
+                           
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="6"><strong>Nenhuma questão disponível</strong></td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@code {
+
+    List<Questao> Questoes = new List<Questao>();
+    protected override async Task OnInitializedAsync()
+    {
+        await AtualizaQuestoes();
+    }
+
+    private async Task AtualizaQuestoes()
+    {
+        Questoes = await service.RetornaQuestaoAsync();
+    }
+
+}
