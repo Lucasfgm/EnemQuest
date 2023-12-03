@@ -1,0 +1,65 @@
+@page "/novaquestao"
+@using info_app.Data
+@inject QuestaoService service
+
+<div class="row m-5">
+        <div class="col-5 bg-light m-2 justify-content-start">
+            <div class="p-3 mb-3 bg-primary text-white text-center">Nova Questao</div>
+            <EditForm Model="@Quest">
+            <div class="form-group">
+                    <label for="nome">Pergunta:</label>
+                    <input type="text" id="titulo" class="form-control" @bind-value="@Quest.QuestaoTitulo" />
+            </div>
+            <div class="form-group">
+                    <label for="nome">Alternativa a:</label>
+                    <input type="text" id="alternativa1" class="form-control" @bind-value="@Quest.Opcao1" />
+            </div>
+            <div class="form-group">
+                    <label for="nome">Alternativa b:</label>
+                    <input type="text" id="alternativa2" class="form-control" @bind-value="@Quest.Opcao2" />
+            </div>
+            <div class="form-group">
+                    <label for="nome">Alternativa c:</label>
+                    <input type="text" id="alternativa3" class="form-control" @bind-value="@Quest.Opcao3" />
+            </div>
+            <div class="form-group">
+                    <label for="nome">Alternativa d:</label>
+                    <input type="text" id="alternativa4" class="form-control" @bind-value="@Quest.Opcao4" />
+            </div>
+            <div class="form-group">
+                    <label for="nome">Alternativa e:</label>
+                    <input type="text" id="alternativa2" class="form-control" @bind-value="@Quest.Opcao5" />
+            </div>
+            <div class="form-group">
+                    <label for="nome">Resposta:</label>
+                    <input type="text" id="resposta" class="form-control" @bind-value="@Quest.Resposta" />
+            </div>
+            <div class="text-center p-3 mb-3">
+                    <button class="btn btn-info" @onclick="AdicionarQuestao"> Adicionar Questão</button>
+                </div>
+            </EditForm>
+            @if (questaoCadastrada)
+        {
+            <div class="alert alert-success" role="alert">
+                Questão Salva com sucesso!
+            </div>
+        }
+        <NavLink href="/questionario">Banco de Questões</NavLink>
+            
+        </div>
+        </div>
+
+@code {
+
+public Questao Quest { get; set; } = new ();
+    private bool questaoCadastrada = false;
+
+    private async Task AdicionarQuestao()    {
+        
+        await service.AddQuestaoAsync(Quest);
+        Quest = new ();
+        questaoCadastrada = true;       
+        
+    }
+
+}
