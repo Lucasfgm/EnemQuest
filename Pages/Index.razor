@@ -1,11 +1,6 @@
 ﻿@page "/"
 @using info_app.Data
 @inject QuestaoService service
-
-
-
-
-
 @inherits LayoutComponentBase
 
 <!DOCTYPE html>
@@ -117,8 +112,8 @@
                     </h5>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Dashboard
+                            <a class="nav-link active" href="">
+                                Home
                             </a>
                         </li>
                         <li class="nav-item">
@@ -127,18 +122,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/novaquestao">
-                                Adicionar Questão
+                            <a class="nav-link" href="/simulado">
+                                Simulado
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/admin">
                                 Administrador
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/listadeusuarios">
-                                Usuários Cadastrados
                             </a>
                         </li>
                     </ul>

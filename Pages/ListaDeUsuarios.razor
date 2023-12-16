@@ -2,48 +2,134 @@
 @using info_app.Data
 @inject UsuarioService service
 
-<h1>Lista de Usuarios</h1>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - EnemQuest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ZVr5A5B6Z1Gu5K5Cuu3Y6xERjL2uPdhl8LrPS4OYjZwKAxSt1veZ3zj3VxAAsjdu" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
 
-   <div class="container">
+        .navbar {
+            background-color: #343a40;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    <div class="row bg-light">
-        <table class="table table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Apelido</th>
-                    <th>Email</th>
-                    <th>Senha</th>
-                    <th>Status</th>
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff;
+        }
 
-                    
-                </tr>
-            </thead>
-            <tbody>
-                @if (Usuarios.Any())
-                {
-                    @foreach (var user in Usuarios)
+        .navbar-dark .navbar-toggler-icon {
+            border-color: #fff;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn-container a {
+            display: block;
+            width: 300px;
+            margin: 10px auto;
+            border: 2px solid dodgerblue; /* Adicionei uma borda */
+            border-radius: 5px; /* Borda arredondada */
+        }
+
+        .btn-dodgerblue {
+            background-color: dodgerblue;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EnemQuest</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro">Registrar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Lista de Usuarios</h1>
+
+    <div class="container">
+
+        <div class="row bg-light">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Apelido</th>
+                        <th>Email</th>
+                        <th>Senha</th>
+                        <th>Status</th>
+
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Usuarios.Any())
                     {
-                        <tr>
-                            <td>@user.Id</td>
-                            <td>@user.Nome</td>
-                            <td>@user.Apelido</td>
-                            <td>@user.Email</td>
-                            <td>@user.Senha</td>
-                            <td>@user.Status</td> 
-                           
-                        </tr>
+                        @foreach (var user in Usuarios)
+                        {
+                            <tr>
+                                <td>@user.Id</td>
+                                <td>@user.Nome</td>
+                                <td>@user.Apelido</td>
+                                <td>@user.Email</td>
+                                <td>@user.Senha</td>
+                                <td>@user.Status</td> 
+                            
+                            </tr>
+                        }
                     }
-                }
-                else
-                {
-                    <tr><td colspan="6"><strong>Nenhum usuario disponível</strong></td></tr>
-                }
-            </tbody>
-        </table>
+                    else
+                    {
+                        <tr><td colspan="6"><strong>Nenhum usuario disponível</strong></td></tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
+</body>
+
+
 
 
 @code {

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj": {}
+    "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj": {
+    "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj",
+        "projectUniqueName": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj",
         "projectName": "EnemQuest",
-        "projectPath": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj",
-        "packagesPath": "C:\\Users\\Lucas Flávio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\",
+        "projectPath": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj",
+        "packagesPath": "C:\\Users\\rique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lucas Flávio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\rique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
