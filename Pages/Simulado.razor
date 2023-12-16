@@ -1,0 +1,73 @@
+@page "/simulado"
+@inject IJSRuntime JS
+@using info_app.Data
+@inject QuestaoService service
+
+<h1>Simulado</h1>
+@if (QuestoesSelecionadas.Any())
+{
+    <form>
+        @foreach (var quest in QuestoesSelecionadas)
+        {
+            <div>
+                <h3>@quest.QuestaoTitulo</h3>
+                <input type="radio" name="@quest.Id" id="@quest.Id-1" value="@quest.Opcao1" />
+                <label for="@quest.Id-1">@quest.Opcao1</label><br />
+                <input type="radio" name="@quest.Id" id="@quest.Id-2" value="@quest.Opcao2" />
+                <label for="@quest.Id-2">@quest.Opcao2</label><br />
+                <input type="radio" name="@quest.Id" id="@quest.Id-3" value="@quest.Opcao3" />
+                <label for="@quest.Id-3">@quest.Opcao3</label><br />
+                <input type="radio" name="@quest.Id" id="@quest.Id-4" value="@quest.Opcao4" />
+                <label for="@quest.Id-4">@quest.Opcao4</label><br />
+                <input type="radio" name="@quest.Id" id="@quest.Id-5" value="@quest.Opcao5" />
+                <label for="@quest.Id-5">@quest.Opcao5</label><br />
+            </div>
+        }
+        <button type="submit" @onclick="(() => ConfirmarRespostas())">Confirmar Respostas</button>
+    </form>
+}
+else
+{
+    <p>Nenhuma questão selecionada.</p>
+}
+
+@code {
+    List<Questao> QuestoesSelecionadas = new List<Questao>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AtualizaQuestoesSelecionadas();
+    }
+
+    private async Task AtualizaQuestoesSelecionadas()
+    {
+        var questoes = await service.RetornaQuestaoAsync();
+        foreach (var quest in questoes)
+        {
+            var checkbox = await JS.InvokeAsync<bool>("eval", $"document.getElementById('{quest.Id}').checked");
+            if (checkbox)
+            {
+                QuestoesSelecionadas.Add(quest);
+            }
+        }
+    }
+
+    private async Task ConfirmarRespostas()
+    {
+        int acertos = 0;
+        int erros = 0;
+        foreach (var quest in QuestoesSelecionadas)
+        {
+            var resposta = await JS.InvokeAsync<string>("eval", $"document.querySelector('input[name=\"{quest.Id}\"]:checked').value");
+            if (resposta == quest.Resposta)
+            {
+                acertos++;
+            }
+            else
+            {
+                erros++;
+            }
+        }
+        await JS.InvokeVoidAsync("alert", $"Você acertou {acertos} questões e errou {erros} questões.");
+    }
+}
