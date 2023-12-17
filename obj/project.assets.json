@@ -7953,36 +7953,28 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.2.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
-=======
       "Microsoft.EntityFrameworkCore >= 7.0.13",
->>>>>>> 2879046a410e3a08894e94ad0ba4f6ffae99561e
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\rique\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj",
+      "projectUniqueName": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj",
       "projectName": "EnemQuest",
-      "projectPath": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj",
-      "packagesPath": "C:\\Users\\Lucas Flávio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\",
+      "projectPath": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj",
+      "packagesPath": "C:\\Users\\rique\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lucas Flávio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\rique\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7990,7 +7982,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8009,7 +8001,6 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[2.2.0, )"
@@ -8017,11 +8008,10 @@
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
             "version": "[2.2.0, )"
-=======
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.13, )"
->>>>>>> 2879046a410e3a08894e94ad0ba4f6ffae99561e
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -8059,8 +8049,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

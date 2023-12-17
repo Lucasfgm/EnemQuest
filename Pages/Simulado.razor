@@ -4,64 +4,55 @@
 @inject QuestaoService service
 
 <h1>Simulado</h1>
-
-@if (Questoes.Any())
+ @if (Questoes.Any())
+                {
+@foreach (var quest in Questoes)
 {
-    @foreach(var quest in Questoes)
-    {
-        
-            <tr>
-                <td>@quest.Id ) @quest.QuestaoTitulo</td>
-            </tr>
-            <tr>
-                <td><input id = "Opcao1" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao1"/>@quest.Opcao1</td>
-                <td><input id = "Opcao2" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao2"/>@quest.Opcao2</td>
-                <td><input id = "Opcao3" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao3"/>@quest.Opcao3</td>
-                <td><input id = "Opcao4" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao4"/>@quest.Opcao4</td>
-                <td><input id = "Opcao5" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao5"/>@quest.Opcao5</td>
-                <label name = "@quest.Id" class = "rb" style = "display:none; color:forestgreen; font:bold;">@quest.Resposta</label>
-            </tr>
-        
+    <div class="questao">
+        <p>@quest.Id) @quest.QuestaoTitulo</p>
+        <ul>
+            <li><input id="Opcao1" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao1" />@quest.Opcao1</li>
+            <li><input id="Opcao2" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao2" />@quest.Opcao2</li>
+            <li><input id="Opcao3" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao3" />@quest.Opcao3</li>
+            <li><input id="Opcao4" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao4" />@quest.Opcao4</li>
+            <li><input id="Opcao5" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao5" />@quest.Opcao5</li>
+        </ul>
+        <label name="@quest.Id" class="resposta" style="display:none;">@quest.Resposta</label>
+    </div>
+}
 
-    }
-    <button id ="but1" type = "button" value ="Submit" class="btn-success" onclick="displayresults();">Submit</button>
-    <label id ="lbluserres" ></label>
-
-
+<button id="but1" type="button" class="btn-success" @onclick="DisplayResults">Submit</button>
+<div id="lbluserres">@userResults</div>
 }
 else
-    {
+{
     <tr><td colspan="6"><strong>Nenhuma questão disponível</strong></td></tr>
+}
+<style>
+    .questao {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
     }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-
-    $(document).ready(function(){
-        $("#but1").click(function(){
-            $(".rb").show();
-            $(".rb").attr("disabled", true);
-        });
-    });
-
-    function displayresults(){
-        document.getElementById("lbluserres").innerHTML = "";
-        var result = document.getElementsByTagName('input');
-        for ( i=0; i<result.length; i++){
-            if(result[i].type == "radio"){
-                if(result[i].checked){
-                     document.getElementById("lbluserres").innerHTML += "Q " + result[i].name + ")" +"Sua resposta selecionada é: " +result[i].value+"<br/>";
-                }
-            }
-
-        }
+    ul {
+        list-style-type: none;
+        padding: 0;
     }
-</script>
 
+    li {
+        margin-bottom: 5px;
+    }
+
+    .btn-success {
+        margin-top: 20px;
+    }
+</style>
 
 @code {
-
     List<Questao> Questoes = new List<Questao>();
+    string userResults = "";
+
     protected override async Task OnInitializedAsync()
     {
         await AtualizaQuestoes();
@@ -71,5 +62,26 @@ else
     {
         Questoes = await service.RetornaQuestaoAsync();
     }
-}
 
+    private async Task DisplayResults()
+    {
+        userResults = "";
+
+        foreach (var quest in Questoes)
+        {
+            var selectedOption = await JS.InvokeAsync<string>("eval", $"document.querySelector('input[name=\"{quest.Id}\"]:checked').value");
+            var respostaCorreta = quest.Resposta;
+
+            userResults += $"<p>Q {quest.Id}) ";
+
+            if (selectedOption == respostaCorreta)
+            {
+                userResults += $"Sua resposta está correta: {selectedOption}</p>";
+            }
+            else
+            {
+                userResults += $"Sua resposta está incorreta. A resposta correta é: {respostaCorreta}</p>";
+            }
+        }
+    }
+}
