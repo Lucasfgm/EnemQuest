@@ -8,8 +8,12 @@
     ".NETCoreApp,Version=v7.0": {
       "EnemQuest/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.2.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
+=======
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+>>>>>>> 2879046a410e3a08894e94ad0ba4f6ffae99561e
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.13"

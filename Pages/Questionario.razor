@@ -2,7 +2,7 @@
 @inject IJSRuntime JS
 @using info_app.Data
 @inject QuestaoService service
-@inject NavigationManager NavigationManager
+
 
 <h1>Questionário</h1>
 
@@ -20,7 +20,6 @@
                     <th>Opcao4</th>
                     <th>Opcao5</th>
                     <th>Resposta</th>
-                    <th>Selecionar</th>
 
                     
                 </tr>
@@ -39,8 +38,8 @@
                             <td>@quest.Opcao4</td> 
                             <td>@quest.Opcao5</td> 
                             <td>@quest.Resposta</td>
-                            <td><input type="checkbox" id="@quest.Id" /></td> 
-                            <td> 
+                
+                            <td>
                                 <button class = "btn btn-danger"
                                 @onclick="(() => ApagaQuestao(quest))">Apagar</button>  
                             </td>
@@ -55,7 +54,6 @@
         </table>
     </div>
 </div>
-<button class="btn btn-primary" @onclick="(() => CriarSimulado())">Criar Simulado</button>
 
 @code {
 
@@ -80,13 +78,5 @@
         }
     }
 
-    private void CriarSimulado()
-    {
-        // Criar instância do NavigationManager
-        var navigationManager = NavigationManager;
-
-        // Navegar para a página de simulado
-        navigationManager.NavigateTo("/simulado");
-    }
 
 }

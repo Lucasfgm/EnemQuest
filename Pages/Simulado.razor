@@ -4,70 +4,72 @@
 @inject QuestaoService service
 
 <h1>Simulado</h1>
-@if (QuestoesSelecionadas.Any())
+
+@if (Questoes.Any())
 {
-    <form>
-        @foreach (var quest in QuestoesSelecionadas)
-        {
-            <div>
-                <h3>@quest.QuestaoTitulo</h3>
-                <input type="radio" name="@quest.Id" id="@quest.Id-1" value="@quest.Opcao1" />
-                <label for="@quest.Id-1">@quest.Opcao1</label><br />
-                <input type="radio" name="@quest.Id" id="@quest.Id-2" value="@quest.Opcao2" />
-                <label for="@quest.Id-2">@quest.Opcao2</label><br />
-                <input type="radio" name="@quest.Id" id="@quest.Id-3" value="@quest.Opcao3" />
-                <label for="@quest.Id-3">@quest.Opcao3</label><br />
-                <input type="radio" name="@quest.Id" id="@quest.Id-4" value="@quest.Opcao4" />
-                <label for="@quest.Id-4">@quest.Opcao4</label><br />
-                <input type="radio" name="@quest.Id" id="@quest.Id-5" value="@quest.Opcao5" />
-                <label for="@quest.Id-5">@quest.Opcao5</label><br />
-            </div>
-        }
-        <button type="submit" @onclick="(() => ConfirmarRespostas())">Confirmar Respostas</button>
-    </form>
+    @foreach(var quest in Questoes)
+    {
+        
+            <tr>
+                <td>@quest.Id ) @quest.QuestaoTitulo</td>
+            </tr>
+            <tr>
+                <td><input id = "Opcao1" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao1"/>@quest.Opcao1</td>
+                <td><input id = "Opcao2" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao2"/>@quest.Opcao2</td>
+                <td><input id = "Opcao3" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao3"/>@quest.Opcao3</td>
+                <td><input id = "Opcao4" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao4"/>@quest.Opcao4</td>
+                <td><input id = "Opcao5" type = "radio" name = "@quest.Id" class = "rb" value ="@quest.Opcao5"/>@quest.Opcao5</td>
+                <label name = "@quest.Id" class = "rb" style = "display:none; color:forestgreen; font:bold;">@quest.Resposta</label>
+            </tr>
+        
+
+    }
+    <button id ="but1" type = "button" value ="Submit" class="btn-success" onclick="displayresults();">Submit</button>
+    <label id ="lbluserres" ></label>
+
+
 }
 else
-{
-    <p>Nenhuma questão selecionada.</p>
-}
+    {
+    <tr><td colspan="6"><strong>Nenhuma questão disponível</strong></td></tr>
+    }
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $("#but1").click(function(){
+            $(".rb").show();
+            $(".rb").attr("disabled", true);
+        });
+    });
+
+    function displayresults(){
+        document.getElementById("lbluserres").innerHTML = "";
+        var result = document.getElementsByTagName('input');
+        for ( i=0; i<result.length; i++){
+            if(result[i].type == "radio"){
+                if(result[i].checked){
+                     document.getElementById("lbluserres").innerHTML += "Q " + result[i].name + ")" +"Sua resposta selecionada é: " +result[i].value+"<br/>";
+                }
+            }
+
+        }
+    }
+</script>
+
 
 @code {
-    List<Questao> QuestoesSelecionadas = new List<Questao>();
 
+    List<Questao> Questoes = new List<Questao>();
     protected override async Task OnInitializedAsync()
     {
-        await AtualizaQuestoesSelecionadas();
+        await AtualizaQuestoes();
     }
 
-    private async Task AtualizaQuestoesSelecionadas()
+    private async Task AtualizaQuestoes()
     {
-        var questoes = await service.RetornaQuestaoAsync();
-        foreach (var quest in questoes)
-        {
-            var checkbox = await JS.InvokeAsync<bool>("eval", $"document.getElementById('{quest.Id}').checked");
-            if (checkbox)
-            {
-                QuestoesSelecionadas.Add(quest);
-            }
-        }
-    }
-
-    private async Task ConfirmarRespostas()
-    {
-        int acertos = 0;
-        int erros = 0;
-        foreach (var quest in QuestoesSelecionadas)
-        {
-            var resposta = await JS.InvokeAsync<string>("eval", $"document.querySelector('input[name=\"{quest.Id}\"]:checked').value");
-            if (resposta == quest.Resposta)
-            {
-                acertos++;
-            }
-            else
-            {
-                erros++;
-            }
-        }
-        await JS.InvokeVoidAsync("alert", $"Você acertou {acertos} questões e errou {erros} questões.");
+        Questoes = await service.RetornaQuestaoAsync();
     }
 }
+

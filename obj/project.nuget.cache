@@ -1,9 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "djOeS+u2Ki1xFQWEQ+DRWBZq1mhhBZIAq4nN7ywMaRjFd/eDGYt39LL8s9q29dz7LbOOeiZ/EujT2pweBd0TbA==",
+=======
+  "dgSpecHash": "p9NxS/4uhGM2oM9vr4AFYQYPYzngoFbNumz4BQYMd1IE6wxLkDY83OGBps9dq9xe1nBX3/2B31deoqK2CzqY9g==",
+>>>>>>> 2879046a410e3a08894e94ad0ba4f6ffae99561e
   "success": true,
-  "projectFilePath": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\EnemQuest.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\EnemQuest.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\rique\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\rique\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\rique\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -150,6 +155,37 @@
     "C:\\Users\\rique\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\rique\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\rique\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+=======
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.13\\microsoft.data.sqlite.core.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.13\\microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.13\\microsoft.entityframeworkcore.design.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.13\\microsoft.entityframeworkcore.relational.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.13\\microsoft.entityframeworkcore.sqlite.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.13\\microsoft.entityframeworkcore.sqlite.core.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.13\\microsoft.entityframeworkcore.tools.7.0.13.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Flávio\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+>>>>>>> 2879046a410e3a08894e94ad0ba4f6ffae99561e
   ],
   "logs": []
 }
