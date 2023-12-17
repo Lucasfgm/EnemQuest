@@ -136,3 +136,12 @@ C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\obj\Debug\net7.0\refin
 C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\obj\Debug\net7.0\EnemQuest.pdb
 C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\obj\Debug\net7.0\EnemQuest.genruntimeconfig.cache
 C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\obj\Debug\net7.0\ref\EnemQuest.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rique\Documents\Faculdade\.NET\Projeto\EnemQuest\bin\Debug\net7.0\System.Security.Permissions.dll
