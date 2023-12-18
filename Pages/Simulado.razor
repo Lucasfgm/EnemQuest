@@ -1,46 +1,171 @@
 @page "/simulado"
 @inject QuestaoService service
 
-<h1>Simulado</h1>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-@foreach (var quest in Questoes)
-{
-    <div class="questao">
-        <p>@quest.Id) @quest.QuestaoTitulo</p>
-        <ul>
-            <li><input id="Opcao1" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao1" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao1)" />@quest.Opcao1</li>
-            <li><input id="Opcao2" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao2" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao2)" />@quest.Opcao2</li>
-            <li><input id="Opcao3" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao3" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao3)" />@quest.Opcao3</li>
-            <li><input id="Opcao4" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao4" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao4)" />@quest.Opcao4</li>
-            <li><input id="Opcao5" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao5" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao5)" />@quest.Opcao5</li>
-        </ul>
-        <label name="@quest.Id" class="resposta" style="display:none;">@quest.Resposta</label>
+    <style>
+        .questao {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .btn-success {
+            margin-top: 20px;
+        }
+
+
+        body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f8f9fa;
+            }
+
+            .navbar {
+                background-color: #343a40;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
+                color: #fff;
+            }
+
+            .navbar-dark .navbar-toggler-icon {
+                border-color: #fff;
+            }
+
+            .navbar-toggler {
+                border: none;
+            }
+
+            .navbar-nav .nav-link {
+                color: #fff;
+                transition: color 0.3s;
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: #007bff;
+            }
+
+            .btn-container {
+                text-align: center;
+            }
+
+            .btn-container a {
+                display: block;
+                width: 300px;
+                margin: 10px auto;
+                border: 2px solid dodgerblue; /* Adicionei uma borda */
+                border-radius: 5px; /* Borda arredondada */
+            }
+
+            .btn-dodgerblue {
+                background-color: dodgerblue;
+                color: #fff;
+            }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">EnemQuest</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro">Registrar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="mt-5">Simulado</h1>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-2">
+                <select class="custom-select">
+                    <option selected disabled>Área</option>
+                    <option>Linguagens</option>
+                    <option>Ciências da Natureza</option>
+                    <option>Matemática</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-2">
+                <select class="custom-select">
+                    <option selected disabled>Dificuldade</option>
+                    <option>Fácil</option>
+                    <option>Médio</option>
+                    <option>Difícil</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-2">
+                <select class="custom-select">
+                    <option selected disabled>Competência</option>
+                    @for (int i = 1; i <= 9; i++)
+                    {
+                        <option>@i</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3 mb-2">
+                <select class="custom-select">
+                    <option selected disabled>Habilidade</option>
+                    @for (int i = 1; i <= 30; i++)
+                    {
+                        <option>@i</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-12 mt-2 mb-2">
+                <button type="button" class="btn btn-dodgerblue float-right">Pesquisar</button>
+            </div>
+        </div>
     </div>
-}
 
-<button id="but1" type="button" class="btn-success" @onclick="DisplayResults">Submit</button>
-<div id="lbluserres">@userResults</div>
 
-<style>
-    .questao {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 20px;
+    @foreach (var quest in Questoes)
+    {
+        <div class="questao">
+            <p>@quest.Id) @quest.QuestaoTitulo</p>
+            <ul>
+                <li><input id="Opcao1" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao1" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao1)" />@quest.Opcao1</li>
+                <li><input id="Opcao2" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao2" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao2)" />@quest.Opcao2</li>
+                <li><input id="Opcao3" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao3" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao3)" />@quest.Opcao3</li>
+                <li><input id="Opcao4" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao4" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao4)" />@quest.Opcao4</li>
+                <li><input id="Opcao5" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao5" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao5)" />@quest.Opcao5</li>
+            </ul>
+            <label name="@quest.Id" class="resposta" style="display:none;">@quest.Resposta</label>
+        </div>
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
+    <button id="but1" type="button" class="btn-success" @onclick="DisplayResults">Submit</button>
+    <div id="lbluserres">@userResults</div>
+</body>
 
-    li {
-        margin-bottom: 5px;
-    }
 
-    .btn-success {
-        margin-top: 20px;
-    }
-</style>
+
 
 @code {
     List<Questao> Questoes = new List<Questao>();
