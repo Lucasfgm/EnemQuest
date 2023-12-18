@@ -1,10 +1,7 @@
-@page "/admin"
+@page "/listadealunos"
 @using info_app.Data
-@inject QuestaoService service
-@inherits LayoutComponentBase
+@inject UsuarioService service
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,10 +65,11 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">EnemQuest</a>
+            <a class="navbar-brand" href="">EnemQuest</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -87,20 +85,65 @@
             </div>
         </div>
     </nav>
+    <h1>Lista de Alunos Cadastrados</h1>
 
-    <div class="container-fluid">
-        <main role="main" class="content">
-            <div class="btn-container">
-                <h1 class="mb-4">Página do Administrador</h1>
-                <a href="cadastrousuario" class="btn btn-dodgerblue btn-lg">Cadastrar Usuário</a>
-                <a href="novaquestao" class="btn btn-dodgerblue btn-lg">Cadastro de Questões</a>
-                <a href="questionario" class="btn btn-dodgerblue btn-lg">Relatório Questões</a>
-                <a href="listadealunos" class="btn btn-dodgerblue btn-lg">Relatório de Professores</a>
-                <a href="listadeprofessores" class="btn btn-dodgerblue btn-lg">Relatório de Alunos</a>                  
-            </div>
-        </main>
+    <div class="container">
+
+        <div class="row bg-light">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Apelido</th>
+                        <th>Email</th>
+                        <th>Senha</th>
+                        <th>Status</th>
+
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Usuarios.Any())
+                    {
+                        @foreach (var user in Usuarios)
+                        {
+                            <tr>
+                                <td>@user.Id</td>
+                                <td>@user.Nome</td>
+                                <td>@user.Apelido</td>
+                                <td>@user.Email</td>
+                                <td>@user.Senha</td>
+                                <td>@user.Status</td> 
+                            
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr><td colspan="6"><strong>Nenhum usuario disponível</strong></td></tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    
 </body>
-</html>
+
+
+
+
+@code {
+
+    List<Usuario> Usuarios = new List<Usuario>();
+    protected override async Task OnInitializedAsync()
+    {
+        await AtualizaUsuario();
+    }
+
+    private async Task AtualizaUsuario()
+    {
+        todosUsuarios = await service.RetornaUsuarioAsync();
+        Usuarios = todosUsuarios.Where(user => !user.Status).ToList();
+    }
+
+}

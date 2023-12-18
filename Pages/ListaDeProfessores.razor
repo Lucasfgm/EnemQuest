@@ -1,4 +1,4 @@
-@page "/listadeusuarios"
+@page "/listadeprofessores"
 @using info_app.Data
 @inject UsuarioService service
 
@@ -143,6 +143,7 @@
     private async Task AtualizaUsuario()
     {
         Usuarios = await service.RetornaUsuarioAsync();
+        Usuarios = todosUsuarios.Where(user => user.Status).ToList();
     }
 
 }
