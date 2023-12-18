@@ -29,53 +29,55 @@
 
 
         body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #f8f9fa;
-            }
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
 
-            .navbar {
-                background-color: #343a40;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            }
+        .navbar {
+            background-color: #343a40;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
 
-            .navbar-brand {
-                font-size: 1.5rem;
-                color: #fff;
-            }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff;
+        }
 
-            .navbar-dark .navbar-toggler-icon {
-                border-color: #fff;
-            }
+        .navbar-dark .navbar-toggler-icon {
+            border-color: #fff;
+        }
 
-            .navbar-toggler {
-                border: none;
-            }
+        .navbar-toggler {
+            border: none;
+        }
 
-            .navbar-nav .nav-link {
-                color: #fff;
-                transition: color 0.3s;
-            }
+        .navbar-nav .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
 
-            .navbar-nav .nav-link:hover {
-                color: #007bff;
-            }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
 
-            .btn-container {
-                text-align: center;
-            }
+        .btn-container {
+            text-align: center;
+        }
 
-            .btn-container a {
-                display: block;
-                width: 300px;
-                margin: 10px auto;
-                border: 2px solid dodgerblue; /* Adicionei uma borda */
-                border-radius: 5px; /* Borda arredondada */
-            }
+        .btn-container a {
+            display: block;
+            width: 300px;
+            margin: 10px auto;
+            border: 2px solid dodgerblue;
+            /* Adicionei uma borda */
+            border-radius: 5px;
+            /* Borda arredondada */
+        }
 
-            .btn-dodgerblue {
-                background-color: dodgerblue;
-                color: #fff;
-            }
+        .btn-dodgerblue {
+            background-color: dodgerblue;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -84,7 +86,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="">EnemQuest</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -105,8 +108,9 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-3 mb-2">
-                <select class="custom-select">
-                    <option selected disabled>Área</option>
+                <label for="competenceDropdown">Área</label>
+                <select class="custom-select" @bind="selectedArea">
+                    <option></option>
                     <option>Linguagens</option>
                     <option>Ciências Humanas</option>
                     <option>Ciências da Natureza</option>
@@ -114,16 +118,18 @@
                 </select>
             </div>
             <div class="col-md-3 mb-2">
-                <select class="custom-select">
-                    <option selected disabled>Dificuldade</option>
+                <label for="competenceDropdown">Dificuldade</label>
+                <select class="custom-select"@bind="selectedDifficulty">
+                    <option></option>
                     <option>Fácil</option>
                     <option>Médio</option>
                     <option>Difícil</option>
                 </select>
             </div>
             <div class="col-md-3 mb-2">
-                <select class="custom-select">
-                    <option selected disabled>Competência</option>
+                <label for="competenceDropdown">Competência</label>
+                <select class="custom-select" @bind="selectedCompetence">
+                    <option></option>
                     @for (int i = 1; i <= 9; i++)
                     {
                         <option>@i</option>
@@ -131,8 +137,9 @@
                 </select>
             </div>
             <div class="col-md-3 mb-2">
-                <select class="custom-select">
-                    <option selected disabled>Habilidade</option>
+                <label for="competenceDropdown">Habilidade</label>
+                <select class="custom-select" @bind="selectedSkill">
+                    <option></option>
                     @for (int i = 1; i <= 30; i++)
                     {
                         <option>@i</option>
@@ -151,11 +158,16 @@
         <div class="questao">
             <p>@quest.Id) @quest.QuestaoTitulo</p>
             <ul>
-                <li><input id="Opcao1" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao1" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao1)" />@quest.Opcao1</li>
-                <li><input id="Opcao2" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao2" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao2)" />@quest.Opcao2</li>
-                <li><input id="Opcao3" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao3" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao3)" />@quest.Opcao3</li>
-                <li><input id="Opcao4" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao4" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao4)" />@quest.Opcao4</li>
-                <li><input id="Opcao5" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao5" @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao5)" />@quest.Opcao5</li>
+                <li><input id="Opcao1" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao1"
+                        @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao1)" />@quest.Opcao1</li>
+                <li><input id="Opcao2" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao2"
+                        @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao2)" />@quest.Opcao2</li>
+                <li><input id="Opcao3" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao3"
+                        @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao3)" />@quest.Opcao3</li>
+                <li><input id="Opcao4" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao4"
+                        @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao4)" />@quest.Opcao4</li>
+                <li><input id="Opcao5" type="radio" name="@quest.Id" class="rb" value="@quest.Opcao5"
+                        @onclick="()=> SelecionarResposta(quest.Id, quest.Opcao5)" />@quest.Opcao5</li>
             </ul>
             <label name="@quest.Id" class="resposta" style="display:none;">@quest.Resposta</label>
         </div>
@@ -170,11 +182,12 @@
 
 @code {
     List<Questao> Questoes = new List<Questao>();
+    List<Questao> QuestoesOriginais = new List<Questao>();
     Dictionary<int, string> respostasSelecionadas = new Dictionary<int, string>();
     string userResults = "";
 
-     string selectedArea;
-     string selectedDifficulty;
+    string selectedArea;
+    string selectedDifficulty;
     int selectedCompetence;
     int selectedSkill;
 
@@ -186,7 +199,8 @@
 
     private async Task AtualizaQuestoes()
     {
-        Questoes = await service.RetornaQuestaoAsync();
+        QuestoesOriginais = await service.RetornaQuestaoAsync(); 
+        Questoes = new List<Questao>(QuestoesOriginais);
     }
 
     private void SelecionarResposta(int questaoId, string opcaoSelecionada)
@@ -220,36 +234,36 @@
                 if (selectedOption == respostaCorreta)
                 {
                     userResults += $"Sua resposta está correta: {selectedOption}";
-                
-                    
+
+
                 }
                 else
                 {
                     userResults += $"Sua resposta está incorreta. A resposta correta é: {respostaCorreta}";
-                     
-                    
+
+
                 }
             }
             else
             {
                 userResults += $"Você não selecionou uma resposta.";
-                  
-                
+
+
             }
         }
     }
 
-      private void ApplyFilter()
-        {
-            var filteredQuestions = Questoes
-                .Where(q =>
-                    (string.IsNullOrEmpty(selectedArea) || q.Area == selectedArea) &&
-                    (string.IsNullOrEmpty(selectedDifficulty) || q.Dificuldade == selectedDifficulty)&&
-                    (selectedCompetence == 0 || q.Competencia == selectedCompetence) &&
-                    (selectedSkill == 0 || q.Habilidade == selectedSkill))
-                .ToList();
+    private void ApplyFilter()
+{
+    var filteredQuestions = QuestoesOriginais
+        .Where(q =>
+            (string.IsNullOrEmpty(selectedArea) || q.Area == selectedArea) &&
+            (string.IsNullOrEmpty(selectedDifficulty) || q.Dificuldade == selectedDifficulty) &&
+            (selectedCompetence == 0 || q.Competencia == selectedCompetence) &&
+            (selectedSkill == 0 || q.Habilidade == selectedSkill))
+        .ToList();
 
-            Questoes = filteredQuestions;
-        }
+    Questoes = filteredQuestions;
+}
 
 }
