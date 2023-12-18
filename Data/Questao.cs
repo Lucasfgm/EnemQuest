@@ -18,4 +18,12 @@ public class Questao
 
         public string? Resposta {get; set;} 
 
+        public string? Area {get; set;}
+
+        public string? Dificuldade {get; set;}
+
+        public int Competencia {get; set;}
+
+        public int Habilidade {get; set;}
+
 }

@@ -5,72 +5,77 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EnemQuest
 build_property.RootNamespace = EnemQuest
-build_property.ProjectDir = C:\Users\IFNMG\Desktop\.NET\Projeto\EnemQuest\
-build_property.RazorLangVersion = 6.0
+build_property.ProjectDir = C:\Users\Lucas Flávio\Documents\Lucas\Faculdade\.net\EnemQuest\
+build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\IFNMG\Desktop\.NET\Projeto\EnemQuest
+build_property.MSBuildProjectDirectory = C:\Users\Lucas Flávio\Documents\Lucas\Faculdade\.net\EnemQuest
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/App.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/Admin.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/Admin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/CadastroUsuario.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/CadastroUsuario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9Vc3VhcmlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/FetchData.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/Index.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/ListaDeUsuarios.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFEZVVzdWFyaW9zLnJhem9y
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/ListaDeAlunos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFEZUFsdW5vcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/Login.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/ListaDeProfessores.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFEZVByb2Zlc3NvcmVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/NovaQuestao.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/NovaQuestao.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm92YVF1ZXN0YW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/Questionario.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/Questionario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUXVlc3Rpb25hcmlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/Simulado.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/Simulado.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2ltdWxhZG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/_Imports.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Shared/MainLayout.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-c5mn5c181j
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Shared/NavMenu.razor]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3xo3y69gb1
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/Error.cshtml]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/IFNMG/Desktop/.NET/Projeto/EnemQuest/Pages/_Host.cshtml]
+[C:/Users/Lucas Flávio/Documents/Lucas/Faculdade/.net/EnemQuest/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

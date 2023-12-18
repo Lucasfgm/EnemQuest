@@ -108,6 +108,7 @@
                 <select class="custom-select">
                     <option selected disabled>Área</option>
                     <option>Linguagens</option>
+                    <option>Ciências Humanas</option>
                     <option>Ciências da Natureza</option>
                     <option>Matemática</option>
                 </select>
@@ -139,7 +140,7 @@
                 </select>
             </div>
             <div class="col-md-12 mt-2 mb-2">
-                <button type="button" class="btn btn-dodgerblue float-right">Pesquisar</button>
+                <button type="button" class="btn btn-dodgerblue float-right" @onclick="ApplyFilter">Pesquisar</button>
             </div>
         </div>
     </div>
@@ -172,6 +173,12 @@
     Dictionary<int, string> respostasSelecionadas = new Dictionary<int, string>();
     string userResults = "";
 
+     string selectedArea;
+     string selectedDifficulty;
+    int selectedCompetence;
+    int selectedSkill;
+
+
     protected override async Task OnInitializedAsync()
     {
         await AtualizaQuestoes();
@@ -197,13 +204,14 @@
     private void DisplayResults()
     {
         userResults = "";
+        var br = "<br>";
 
         foreach (var quest in Questoes)
         {
             var questaoId = quest.Id;
             var respostaCorreta = quest.Resposta;
 
-            userResults += $"Q {questaoId}) ";
+            userResults += $"Q {questaoId})";
 
             if (respostasSelecionadas.ContainsKey(questaoId))
             {
@@ -212,16 +220,36 @@
                 if (selectedOption == respostaCorreta)
                 {
                     userResults += $"Sua resposta está correta: {selectedOption}";
+                
+                    
                 }
                 else
                 {
                     userResults += $"Sua resposta está incorreta. A resposta correta é: {respostaCorreta}";
+                     
+                    
                 }
             }
             else
             {
-                userResults += "Você não selecionou uma resposta.";
+                userResults += $"Você não selecionou uma resposta.";
+                  
+                
             }
         }
     }
+
+      private void ApplyFilter()
+        {
+            var filteredQuestions = Questoes
+                .Where(q =>
+                    (string.IsNullOrEmpty(selectedArea) || q.Area == selectedArea) &&
+                    (string.IsNullOrEmpty(selectedDifficulty) || q.Dificuldade == selectedDifficulty)&&
+                    (selectedCompetence == 0 || q.Competencia == selectedCompetence) &&
+                    (selectedSkill == 0 || q.Habilidade == selectedSkill))
+                .ToList();
+
+            Questoes = filteredQuestions;
+        }
+
 }

@@ -142,7 +142,7 @@
 
     private async Task AtualizaUsuario()
     {
-        todosUsuarios = await service.RetornaUsuarioAsync();
+        var todosUsuarios = await service.RetornaUsuarioAsync();
         Usuarios = todosUsuarios.Where(user => !user.Status).ToList();
     }
 

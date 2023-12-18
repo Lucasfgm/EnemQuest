@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8NBeWzh/EwWUMr0hX1jcN7u8FA9+SXqCmIUCA1GjKZM=",
+  "Hash": "7/+Z0lEfEPHJX6mh30aHMUNNKBHyr/BnXExxsIuVLko=",
   "Source": "EnemQuest",
   "BasePath": "_content/EnemQuest",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EnemQuest\\wwwroot",
       "Source": "EnemQuest",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\bundle\\EnemQuest.styles.css",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\bundle\\EnemQuest.styles.css",
       "SourceId": "EnemQuest",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "EnemQuest.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\bundle\\EnemQuest.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\bundle\\EnemQuest.styles.css"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EnemQuest.bundle.scp.css",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EnemQuest.bundle.scp.css",
       "SourceId": "EnemQuest",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "EnemQuest.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EnemQuest.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EnemQuest.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\css\\site.css",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\favicon.png",
       "SourceId": "EnemQuest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\rique\\Documents\\Faculdade\\.NET\\Projeto\\EnemQuest\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lucas Flávio\\Documents\\Lucas\\Faculdade\\.net\\EnemQuest\\wwwroot\\",
       "BasePath": "_content/EnemQuest",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
